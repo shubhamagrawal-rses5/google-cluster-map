@@ -16,7 +16,7 @@ export default function AllMarkers({ map }) {
     const all = markers.current;
     // console.log(all);
     const markerCluster = new MarkerClusterer({ all, map });
-    markerCluster.setMap(map);
+//     markerCluster.setMap(map);
   });
 
   return null;
