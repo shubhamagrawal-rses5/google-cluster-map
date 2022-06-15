@@ -55,12 +55,18 @@ export default function AllMarkers({ map }) {
     });
 
     const all = markers.current;
+<<<<<<< HEAD
 
     if (all) {
       // console.log(all);
       const markerCluster = new MarkerClusterer({ all, map });
       markerCluster.setMap(map);
     }
+=======
+    // console.log(all);
+    const markerCluster = new MarkerClusterer({ all, map });
+//     markerCluster.setMap(map);
+>>>>>>> bc0d96918d7202c6189b598c01b6aca7e5c67d9f
   });
 
   return null;
