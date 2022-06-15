@@ -40,5 +40,17 @@
   },
   "devDependencies": {
     "@types/google.maps": "^3.49.2"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubham-sprinklr/Cluster-map.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubham-sprinklr/Cluster-map/issues"
+  },
+  "homepage": "https://github.com/shubham-sprinklr/Cluster-map#readme"
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 const style = {
-  height: "80vh",
+  height: "90vh",
   width: "100%",
 };
 export default function MyMapComponent({ center, zoom, children }) {
@@ -12,6 +12,13 @@ export default function MyMapComponent({ center, zoom, children }) {
       setMap(new window.google.maps.Map(ref.current, {} ));
     }
   }, [ref, map]);
+  React.useEffect(() => {
+    if (map) {
+      ["click", "idle"].forEach((eventName) =>
+        window.google.maps.event.clearListeners(map, eventName)
+      );
+    }
+  }, [map]);
  if(map)
  {
      map.setCenter(center);
@@ -19,7 +26,7 @@ export default function MyMapComponent({ center, zoom, children }) {
  }
   return (
     <>
-      <div ref={ref} style={style} />
+      <div ref={ref} style={style} id="map"/>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, { map });
